@@ -8,13 +8,16 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVR, SVC
 import joblib
+import os
 
 
 
 if __name__ == '__main__':
+
+    print(os.getcwd())
     SVC(gamma='auto')
-    train = pd.read_csv("C:/Users/sisi_/PycharmProjects/IndoorTest/input/TrainingData.csv")
-    test = pd.read_csv("C:/Users/sisi_/PycharmProjects/IndoorTest/input/ValidationData.csv")
+    train = pd.read_csv("./input/TrainingData.csv")
+    test = pd.read_csv("./input/ValidationData.csv")
 
     drop_c = ['LONGITUDE', 'LATITUDE', 'RELATIVEPOSITION', 'BUILDINGID', 'RELATIVEPOSITION',
               'USERID', 'USERID', 'TIMESTAMP', 'PHONEID']
